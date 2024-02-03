@@ -1,6 +1,6 @@
 #include <Novice.h>
-#include"Enemy.h"
 #include"Player.h"
+#include"Enemy.h"
 const char kWindowTitle[] = "GC_1B_08_タムラ_ハナコ_タイトル";
 
 // Windowsアプリでのエントリーポイント(main関数)
@@ -8,11 +8,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	// ライブラリの初期化
 	Novice::Initialize(kWindowTitle, 1280, 720);
-
-	Enemy* enemy = new Enemy(500, 100, 5, true);
-
 	Player* player = new Player(300, 300, 5, 5);
-
+	Enemy* enemy = new Enemy(500, 100, 5, true);
+	
 	// キー入力結果を受け取る箱
 	char keys[256] = {0};
 	char preKeys[256] = {0};
@@ -29,8 +27,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓更新処理ここから
 		///
-		enemy->Update();
 		player->Update(keys);
+		enemy->Update();
+		
 		///
 		/// ↑更新処理ここまで
 		///
@@ -38,9 +37,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓描画処理ここから
 		///
-		enemy->Draw();
+		
 		player->Draw();
-
+		enemy->Draw();
 		///
 		/// ↑描画処理ここまで
 		///

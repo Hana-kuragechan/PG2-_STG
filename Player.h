@@ -19,7 +19,7 @@ public:
 	int GetSpeedYX() { return speedX_; };
 	int GetRadius() { return radius_; };
 
-	void SetSpeedX(int speedX) { speedX_ = speedX; }
+	void SetSpeedX(int speedX) { speedX_ = speedX; };
 	void SetSpeedY(int speedY) { speedY_ = speedY; };
 
 
