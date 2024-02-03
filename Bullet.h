@@ -1,33 +1,30 @@
 #pragma once
 #include<Novice.h>
-#include<Bullet.h>
 
-class Player
+class Bullet
 {
 public:
+	Bullet();
 
-	Player(int posX, int posY, int speedX, int speedY);
-	~Player();
-
-	void Update(char* keys);
+	void Update();
 	void Draw();
-	Bullet *bullet_;
 
 	int GetPosX() { return posX_; };
 	int GetPosY() { return posY_; };
 	int GetSpeedX() { return speedX_; };
-	int GetSpeedYX() { return speedX_; };
 	int GetRadius() { return radius_; };
+	bool GetIsShot() { return isShot_; };
 
 	void SetSpeedX(int speedX) { speedX_ = speedX; }
-	void SetSpeedY(int speedY) { speedY_ = speedY; };
-
+	void SetPosX(int posX) { posX_ = posX; }
+	void SetPosY(int posY) { posY_ = posY; }
+	void SetIsShot(bool isShot) { isShot_ = isShot; }
 
 private:
 	int posX_;
 	int posY_;
-	int speedX_;
-	int speedY_;
 	int radius_;
+	int speedX_;
+	bool isShot_;
 };
 

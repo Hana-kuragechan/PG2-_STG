@@ -6,10 +6,12 @@ Player::Player(int posX, int posY, int speedX, int speedY)
 	speedX_ = speedX;
 	speedY_ = speedY;
 	radius_ = 30;
+	bullet_ = new Bullet;
 }
 
 void Player::Draw()
 {
+	bullet_->Draw();
 	Novice::DrawEllipse(posX_, posY_, radius_, radius_, 0.0f, WHITE, kFillModeSolid);
 }
 
@@ -38,5 +40,14 @@ void Player::Update(char* keys)
 		if (posX_ >= 1280 - radius_) {
 			posX_ = 1280 - radius_;
 		}
+	}
+
+	if (keys[DIK_SPACE] && bullet_->GetIsShot() == false) {
+		bullet_->SetIsShot(true);
+		bullet_->SetPosX(posX_);
+		bullet_->SetPosY(posY_);
+	}
+	if (bullet_->GetIsShot() == true) {
+		bullet_->Update();
 	}
 }
