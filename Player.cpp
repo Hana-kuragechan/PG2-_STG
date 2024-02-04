@@ -52,7 +52,7 @@ void Player::Update(char* keys)
 			}
 		}
 
-		if (keys[DIK_SPACE] && bullet_->GetIsShot() == false) {
+		if (keys[DIK_RETURN] && bullet_->GetIsShot() == false) {
 			bullet_->SetIsShot(true);
 			bullet_->SetPosX(posX_);
 			bullet_->SetPosY(posY_);

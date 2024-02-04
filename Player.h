@@ -18,7 +18,7 @@ public:
 	int GetSpeedX() { return speedX_; };
 	int GetSpeedYX() { return speedX_; };
 	int GetRadius() { return radius_; };
-	
+	int GetIsAive() { return isAlive_; };
 
 	void SetSpeedX(int speedX) { speedX_ = speedX; };
 	void SetSpeedY(int speedY) { speedY_ = speedY; };

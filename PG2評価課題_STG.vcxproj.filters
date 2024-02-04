@@ -127,5 +127,6 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="GameScene.h" />
   </ItemGroup>
 </Project>
