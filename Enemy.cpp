@@ -6,9 +6,13 @@ Enemy::Enemy(int posX, int posY, int speedX, bool isAlive)
 	speedX_ = speedX;
 	isAlive_ = isAlive;
 	radius_ = 30;
-	respawnTimer = 60;
+	respawnTimer = 120;
 }
 
+Enemy::~Enemy()
+{
+	
+}
 void Enemy::Update()
 {
 	if (isAlive_ == true) {

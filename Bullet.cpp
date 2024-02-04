@@ -15,7 +15,7 @@ void Bullet::Update()
 		posY_ -= speedX_;
 
 	}
-	if (posY_< 0) {
+	if (posY_< -radius_) {
 		isShot_ = false;
 	}
 }

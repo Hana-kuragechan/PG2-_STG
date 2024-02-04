@@ -16,6 +16,7 @@ public:
 	int GetRadius() { return radius_; };
 
 	void SetSpeedX(int speedX) { speedX_ = speedX; }
+	void SetIsAlive(bool isAlive) { isAlive_ = isAlive; }
 
 
 private:

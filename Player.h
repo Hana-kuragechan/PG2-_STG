@@ -6,7 +6,7 @@ class Player
 {
 public:
 
-	Player(int posX, int posY, int speedX, int speedY);
+	Player(int posX, int posY, int speedX, int speedY,bool isAlive);
 	~Player();
 
 	void Update(char* keys);
@@ -18,10 +18,11 @@ public:
 	int GetSpeedX() { return speedX_; };
 	int GetSpeedYX() { return speedX_; };
 	int GetRadius() { return radius_; };
+	
 
 	void SetSpeedX(int speedX) { speedX_ = speedX; };
 	void SetSpeedY(int speedY) { speedY_ = speedY; };
-
+	void SetIsAlive(bool isAlive) { isAlive_ = isAlive; }
 
 private:
 	int posX_;
@@ -29,5 +30,6 @@ private:
 	int speedX_;
 	int speedY_;
 	int radius_;
+	bool isAlive_;
 };
 
